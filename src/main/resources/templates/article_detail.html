@@ -33,8 +33,10 @@
             <div class="w-96">
                 <textarea class="textarea textarea-bordered textarea-lg w-full max-w-xs h-48" name="content" th:text="${article.content}"></textarea>
             </div>
-            <button type="button" class="btn btn-success" onclick="confirmModify()">수정</button>
-            <button type="button" class="btn btn-success" th:attr="onclick='confirmDelete(\'' + ${article.id} + '\')'">삭제</button>
+            <div class="flex gap-4"> <!-- 수정된 부분 -->
+                <button type="button" class="btn btn-success" onclick="confirmModify()">수정</button>
+                <button type="button" class="btn btn-success" th:attr="onclick='confirmDelete(\'' + ${article.id} + '\')'">삭제</button>
+            </div>
         </form>
     </div>
 </div>
